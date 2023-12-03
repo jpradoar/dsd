@@ -1,5 +1,6 @@
 # Deep Space dice roll (dsd)
+ 
+test it on:  [https://jpradoar.github.io/dsd/](https://jpradoar.github.io/dsd/)
 
-deep-space-dice-html
-<br><br>
+<br>
 <img src="screen.png"> 
