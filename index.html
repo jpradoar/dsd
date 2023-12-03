@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Space D-6</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 5px; /* Agregamos un pequeño margen entre las imágenes */
+    }
+    .imagen-final {
+      width: 200px; /* Tamaño específico para la imagen al final */
+      height: auto;
+    }    
+  </style>
+</head>
+<body>
+  <h1>Deep Space D-6</h1>
+  <img src="ref.png" class="imagen-final">
+  <br><br>Roll dices<br>
+  <button onclick="tirarDados(1)">1 </button>
+  <button onclick="tirarDados(2)">2 </button>
+  <button onclick="tirarDados(3)">3 </button>
+  <button onclick="tirarDados(4)">4 </button>
+  <button onclick="tirarDados(5)">5 </button>
+  <button onclick="tirarDados(6)">6 </button>
+  <div id="resultados"><br></div>
+  <script>
+    function tirarDados(cantidad) {
+      const resultadosDiv = document.getElementById('resultados');
+      resultadosDiv.innerHTML = '';
+      resultadosDiv.appendChild(document.createElement('br')); // Agrega un salto de línea
+      for (let i = 0; i < cantidad; i++) {
+        const numeroDado  = Math.floor(Math.random() * 6) + 1;
+        const DiceImg = `dice-0${numeroDado}.png`;  // Reemplaza esto con el nombre de tus imágenes
+        const imagen  = document.createElement('img');
+        imagen.src = DiceImg;
+        imagen.alt = `Dice ${numeroDado}`;
+        resultadosDiv.appendChild(imagen);
+      }
+    }
+  </script>
+</body>
+</html>
